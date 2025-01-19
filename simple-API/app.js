@@ -7,8 +7,9 @@ let reqNum = 0
 const calculateNumberOfRequests = (req, res, next) => { 
     reqNum++
     console.log(reqNum);
-    req.reqNumber = reqNum
-    next()
+    console.log(req.headers)
+   
+  m/  next()
  }
 
 app.use(calculateNumberOfRequests)
@@ -16,7 +17,7 @@ app.use(calculateNumberOfRequests)
 
 app.get("/", (req, res) => {
 
-    res.send({ message: "It's working", ip: `The number of requests is ${reqNum}` })
+    res.json({ message: "It's working", ip: `The number of requests is ${reqNum}` })
     
 
 })

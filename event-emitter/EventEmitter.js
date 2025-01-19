@@ -9,3 +9,8 @@ myE.on("log", () => {
     
 })
 
+myE.on("hi", (data) => {
+    console.log(data);
+})
+
+myE.emit("hi", "Hello World")
