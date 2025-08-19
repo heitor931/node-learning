@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You & Your Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <header class="hero">
+        <h1>What I think about you 👋</h1>
+        <p class="tagline">Quick take based on our convo</p>
+      </header>
+
+      <section class="summary">
+        <h2>You’re a curious, full-stack problem-solver</h2>
+        <p>
+          From your questions, you dig into <strong>Node.js & Web Streams</strong>, handle
+          <strong>multipart forms (Busboy)</strong>, wire up <strong>Next.js</strong> caching and
+          revalidation, embed and control <strong>PDFs</strong>, manage <strong>Linux</strong> camera and audio,
+          wrangle <strong>Git</strong>, navigate <strong>Cisco/Packet Tracer</strong>, and write clean
+          <strong>TypeScript/JS</strong>. That’s a versatile toolkit!
+        </p>
+      </section>
+
+      <section class="skills">
+        <h3>Skill Highlights</h3>
+        <ul class="pills" id="skill-pills">
+          <!-- JS will populate these -->
+        </ul>
+      </section>
+
+      <section class="callout">
+        <p id="dynamic-line" aria-live="polite"></p>
+        <button id="shuffle" class="btn">Shuffle insight</button>
+      </section>
+
+      <footer class="footer">
+        <small>Made with 🤖 + ☕ — edit <code>styles.css</code> & <code>app.js</code> to make it yours.</small>
+      </footer>
+    </section>
+  </main>
+
+  <script src="index.js" defer></script>
+</body>
+</html>

@@ -11,6 +11,30 @@ server.on('request', async(request, response) => {
     console.log(request.url, request.method);
 
    if (request.url === '/' && request.method === 'GET'){
+       response.setHeader('Content-Type', 'text/html')
+       response.statusCode = 200
+        const fileHandle = await fs.open('./public/index.html')
+        const readStream = fileHandle.createReadStream()
+        await pump(readStream, response )
+    
+   }
+   if (request.url === '/styles.css' && request.method === 'GET'){
+       response.setHeader('Content-Type', 'text/css')
+       response.statusCode = 200
+        const fileHandle = await fs.open('./public/styles.css')
+        const readStream = fileHandle.createReadStream()
+        await pump(readStream, response )
+    
+   }
+   if (request.url === '/index.js' && request.method === 'GET'){
+       response.setHeader('Content-Type', 'text/index.js')
+       response.statusCode = 200
+        const fileHandle = await fs.open('./public/index.js')
+        const readStream = fileHandle.createReadStream()
+        await pump(readStream, response )
+    
+   }
+   if (request.url === '/test' && request.method === 'GET'){
        response.setHeader('Content-Type', 'application/json')
        response.statusCode = 200
         const fileHandle = await fs.open('dummyData.txt')
